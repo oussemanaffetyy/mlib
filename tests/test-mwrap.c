@@ -34,6 +34,25 @@
 
 #include "coverage.h"
 
+// TODO: Add IT_REF PROPERTIES for associative array / set as:
+//  0: IT_REF is a pointer to key (set only)
+//  1: IT_REF is a pointer to pair (key, value) (map)
+//  2: IT_REF is a pair of pointer to key, pointer to value (map)
+
+// TODO: modify m-wrap to use this property instead of LIMITS(3)
+// FIXME: m-concurrent ? Need to export property ?
+
+// TODO: Remove LIMITS(3)
+
+// TODO: Factorize common usage of LIMITS as the default kind of wrapper:
+//  STACK (array, list, dequeu, prioqueue)
+//  QUEUE (dplist, dequeu), 
+//  OSET (rbtree, b+tree), 
+//  USET (rbtree, b+tree, dict_set, dict_oa_set), 
+//  OMAP (dict, dict_oa), 
+//  UMAP (b+tree, dict, dict_oa), 
+//  CUSTOM (To be provided by user)
+// providing both the size minimal of the types and the classic export oplist
 
 #define EXPORT_LIST (INIT(1), INIT_SET(1), SET(1), CLEAR(1), PUSH(1), POP(1) )
 WRAP_FULL_DECL(wrap_list, int, EXPORT_LIST )
