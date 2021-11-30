@@ -1095,6 +1095,7 @@
    ,M_IF_METHOD(NEW, oplist)(NEW(M_GET_NEW key_oplist),)                      \
    ,M_IF_METHOD(REALLOC, oplist)(REALLOC(M_GET_REALLOC key_oplist),)          \
    ,M_IF_METHOD(DEL, oplist)(DEL(M_GET_DEL key_oplist),)                      \
+   ,PROPERTIES( (IT_REF(1)))                                                  \
    )
 
 /* Deferred evaluation for the definition,
@@ -1154,6 +1155,7 @@
    ,M_IF_METHOD(NEW, oplist)(NEW(M_GET_NEW oplist),)                          \
    ,M_IF_METHOD(REALLOC, oplist)(REALLOC(M_GET_REALLOC oplist),)              \
    ,M_IF_METHOD(DEL, oplist)(DEL(M_GET_DEL oplist),)                          \
+   ,PROPERTIES( (IT_REF(0)))                                                  \
    )
 
 /* Define Lower Bound for hash table (TODO: Common macro for both implementation) */

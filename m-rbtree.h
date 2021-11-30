@@ -112,6 +112,7 @@
    ,M_IF_METHOD(NEW, oplist)(NEW(M_GET_NEW oplist),)                          \
    ,M_IF_METHOD(REALLOC, oplist)(REALLOC(M_GET_REALLOC oplist),)              \
    ,M_IF_METHOD(DEL, oplist)(DEL(M_GET_DEL oplist),)                          \
+   ,PROPERTIES( (IT_REF(0)))                                                  \
    )
 
 /* Max depth of the binary tree
